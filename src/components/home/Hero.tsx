@@ -73,6 +73,23 @@ function ResonanceRings() {
           strokeWidth={i === 0 ? 2 : 1.25}
         />
       ))}
+      {/* Expanding waves, staggered so one is always travelling outward. */}
+      {[0, 2.33, 4.66].map((delay) => (
+        <circle
+          key={delay}
+          className="ripple"
+          style={{ animationDelay: `${delay}s` }}
+          cx="300"
+          cy="300"
+          r="60"
+          fill="none"
+          stroke="#f2c230"
+          strokeOpacity={0.6}
+          strokeWidth={1.5}
+          vectorEffect="non-scaling-stroke"
+          opacity={0}
+        />
+      ))}
       <circle cx="300" cy="300" r="8" fill="#f2c230" />
     </svg>
   );

@@ -32,10 +32,10 @@ export function ResearchSection() {
             return (
               <li
                 key={area.id}
-                className="flex flex-col rounded-xl border border-line bg-white p-6 transition-shadow hover:shadow-md"
+                className="group reveal flex flex-col rounded-xl border border-line bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg"
               >
                 <div className="flex items-center gap-3">
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-brand-700 text-white">
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-brand-700 text-white transition-colors duration-300 group-hover:bg-gold-400 group-hover:text-brand-950">
                     <Icon aria-hidden="true" className="size-6" />
                   </span>
                   <h3 className="text-lg font-semibold text-brand-900">

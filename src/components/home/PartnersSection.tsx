@@ -14,12 +14,12 @@ export function PartnersSection() {
 
         <ul className="mt-8 grid items-center gap-6 sm:grid-cols-3">
           {partners.map((partner) => (
-            <li key={partner.name}>
+            <li key={partner.name} className="reveal">
               <a
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-32 items-center justify-center rounded-lg p-4 transition-colors hover:bg-paper"
+                className="flex h-32 items-center justify-center rounded-lg p-4 grayscale-[35%] transition duration-300 hover:bg-paper hover:grayscale-0"
               >
                 <Image
                   src={partner.logo}

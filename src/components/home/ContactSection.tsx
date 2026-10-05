@@ -10,7 +10,7 @@ export function ContactSection() {
       className="bg-brand-800 text-white"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-14 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
-        <div className="max-w-2xl">
+        <div className="reveal max-w-2xl">
           <h2 id="contact-title" className="font-serif text-3xl font-bold">
             Contact Us
           </h2>
