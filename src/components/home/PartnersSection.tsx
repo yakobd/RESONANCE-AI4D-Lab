@@ -4,7 +4,7 @@ import { partners } from "@/content/site";
 export function PartnersSection() {
   return (
     <section aria-labelledby="partners-title">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 pt-14 pb-20 sm:px-6 lg:pb-24">
         <h2
           id="partners-title"
           className="text-center text-sm font-semibold tracking-wider text-accent uppercase"
