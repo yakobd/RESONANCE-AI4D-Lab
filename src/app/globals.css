@@ -18,13 +18,39 @@
   --color-gold-300: #f7d76a;
   --color-gold-400: #f2c230;
 
+  /*
+   * Semantic tokens: components use these, so one switch changes the theme.
+   * Light values here; dark values under [data-theme="dark"] below.
+   */
+  --color-surface: #ffffff;
+  --color-paper: #f7f9f8;
   --color-ink: #14201c;
   --color-muted: #4a5a54;
   --color-line: #dbe4e0;
-  --color-paper: #f7f9f8;
+  --color-heading: #06352c;
+  --color-accent: #136b55;
+  --color-accent-strong: #0e5847;
+  --color-tint: #eef6f2;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+/* `dark:` utilities follow the chosen theme, not only the OS setting. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Dark theme: same green identity, with text colours checked for AA contrast. */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-surface: #0f1d19;
+  --color-paper: #0a1613;
+  --color-ink: #e4ece9;
+  --color-muted: #a7b8b1;
+  --color-line: #263a34;
+  --color-heading: #eaf5ef;
+  --color-accent: #7fd1ad;
+  --color-accent-strong: #8fdcb8;
+  --color-tint: #163129;
 }
 
 @layer base {
@@ -35,12 +61,12 @@
   }
 
   body {
-    @apply bg-white font-sans text-ink antialiased;
+    @apply bg-surface font-sans text-ink antialiased;
   }
 
   /* Green focus ring on light surfaces, gold on dark ones (both >= 3:1 contrast). */
   :focus-visible {
-    @apply outline-3 outline-offset-2 outline-brand-600;
+    @apply outline-3 outline-offset-2 outline-accent;
   }
 
   [data-surface="dark"] :focus-visible {

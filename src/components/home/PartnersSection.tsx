@@ -7,7 +7,7 @@ export function PartnersSection() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <h2
           id="partners-title"
-          className="text-center text-sm font-semibold tracking-wider text-brand-600 uppercase"
+          className="text-center text-sm font-semibold tracking-wider text-accent uppercase"
         >
           Our Partners
         </h2>
@@ -19,7 +19,7 @@ export function PartnersSection() {
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-32 items-center justify-center rounded-lg p-4 grayscale-[35%] transition duration-300 hover:bg-paper hover:grayscale-0"
+                className="flex h-32 items-center justify-center rounded-lg p-4 grayscale-[35%] transition duration-300 hover:bg-paper hover:grayscale-0 dark:bg-white dark:hover:bg-white"
               >
                 <Image
                   src={partner.logo}

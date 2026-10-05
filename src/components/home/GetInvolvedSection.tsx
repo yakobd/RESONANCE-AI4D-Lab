@@ -26,12 +26,12 @@ export function GetInvolvedSection() {
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
-          <article className="group reveal flex flex-col rounded-xl border border-line bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg">
+          <article className="group reveal flex flex-col rounded-xl border border-line bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg">
             <div className="flex items-center gap-3">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700 transition-colors duration-300 group-hover:bg-brand-700 group-hover:text-white">
+              <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-tint text-accent-strong transition-colors duration-300 group-hover:bg-brand-700 group-hover:text-white">
                 <GraduationCap aria-hidden="true" className="size-6" />
               </span>
-              <h3 className="text-lg font-semibold text-brand-900">
+              <h3 className="text-lg font-semibold text-heading">
                 {getInvolved.students.title}
               </h3>
             </div>
@@ -43,7 +43,7 @@ export function GetInvolvedSection() {
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <CalendarDays
                   aria-hidden="true"
-                  className="size-5 text-brand-700"
+                  className="size-5 text-accent-strong"
                 />
                 <p className="font-semibold text-ink">
                   {applicationCall.title}
@@ -83,12 +83,12 @@ export function GetInvolvedSection() {
             </div>
           </article>
 
-          <article className="group reveal flex flex-col rounded-xl border border-line bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg">
+          <article className="group reveal flex flex-col rounded-xl border border-line bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg">
             <div className="flex items-center gap-3">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700 transition-colors duration-300 group-hover:bg-brand-700 group-hover:text-white">
+              <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-tint text-accent-strong transition-colors duration-300 group-hover:bg-brand-700 group-hover:text-white">
                 <Handshake aria-hidden="true" className="size-6" />
               </span>
-              <h3 className="text-lg font-semibold text-brand-900">
+              <h3 className="text-lg font-semibold text-heading">
                 {getInvolved.partners.title}
               </h3>
             </div>

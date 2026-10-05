@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { themeInitScript } from "@/lib/theme";
 import { lab } from "@/content/site";
 import "./globals.css";
 
@@ -31,7 +32,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    // suppressHydrationWarning: the theme script sets data-theme on <html>
+    // before React hydrates, which is expected and safe.
+    <html
+      lang="en"
+      className={`${inter.variable} ${playfair.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="flex min-h-screen flex-col">
         <a
           href="#main"

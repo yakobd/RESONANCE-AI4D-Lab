@@ -22,12 +22,12 @@ export function VisionSection() {
             return (
               <li
                 key={item.title}
-                className="group reveal rounded-xl border border-line bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg"
+                className="group reveal rounded-xl border border-line bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg"
               >
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700 transition-colors duration-300 group-hover:bg-brand-700 group-hover:text-white">
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-tint text-accent-strong transition-colors duration-300 group-hover:bg-brand-700 group-hover:text-white">
                   <Icon aria-hidden="true" className="size-6" />
                 </span>
-                <h3 className="mt-4 text-lg font-semibold text-brand-900">
+                <h3 className="mt-4 text-lg font-semibold text-heading">
                   {item.title}
                 </h3>
                 <p className="mt-2 leading-relaxed text-muted">

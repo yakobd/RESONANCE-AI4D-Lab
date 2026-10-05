@@ -13,12 +13,12 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className="reveal max-w-2xl">
-      <p className="text-sm font-semibold tracking-wider text-brand-600 uppercase">
+      <p className="text-sm font-semibold tracking-wider text-accent uppercase">
         {eyebrow}
       </p>
       <h2
         id={id}
-        className="mt-2 font-serif text-3xl font-bold text-brand-900 sm:text-4xl"
+        className="mt-2 font-serif text-3xl font-bold text-heading sm:text-4xl"
       >
         {title}
       </h2>

@@ -11,7 +11,7 @@ export function MoreLink({ href, children, srContext }: MoreLinkProps) {
   return (
     <a
       href={href}
-      className="group inline-flex items-center gap-1.5 font-semibold text-brand-700 underline-offset-4 hover:underline"
+      className="group inline-flex items-center gap-1.5 font-semibold text-accent-strong underline-offset-4 hover:underline"
     >
       {children}
       {srContext && <span className="sr-only"> {srContext}</span>}
