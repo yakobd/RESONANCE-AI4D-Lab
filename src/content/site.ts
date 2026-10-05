@@ -86,6 +86,10 @@ export const vision: VisionItem[] = [
   },
 ];
 
+// Source: Research page ("Our Research"), first sentence.
+export const researchIntro =
+  "The RESONANCE AI4D Lab conducts cutting-edge research focused on developing ethical, scalable, and contextually relevant AI solutions to address Ethiopia's most pressing development challenges.";
+
 export type FocusArea = {
   id: "health" | "agriculture" | "governance" | "energy";
   title: string;
