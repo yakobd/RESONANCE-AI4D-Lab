@@ -82,3 +82,41 @@ The site already has good, substantive content: a clear mission, four well-defin
 - **A clear identity:** the AAU seal, the lab name and the motto *"Harnessing AI for Sustainable and Inclusive Development"*.
 - **A simple site structure:** About, Research, Team, News & Events, Publications, Get Involved, Contact is a sensible set of pages.
 - **Credible partners** are shown on the homepage: AI4D, IDRC (Canada) and UK International Development.
+
+## Prioritized recommendations
+
+I ranked each finding by **impact** (how many visitors it affects and how much it gets in their way) against **effort**, and by whether it can be fixed **without new information from the lab**. The prototype must not invent content, so anything that needs new facts (photos, publications, a phone number) is a recommendation for the lab, not part of the prototype.
+
+### P1: Fix now (implemented in the homepage prototype)
+
+| # | Recommendation | Fixes | Why it comes first |
+|---|---|---|---|
+| 1 | **Rebuild the content as native, semantic HTML** with one shared stylesheet, instead of iframe embeds that each load the Tailwind Play CDN | Performance, mobile clipping and nested scrollbars, heading structure, SEO | This one change is the root cause of most other problems. Everything else builds on it. |
+| 2 | **Say who the lab is at the top of the page:** a hero with the full lab name, the mission in one sentence, the motto, the AAU/CTBE context and clear next steps | Clarity, first impression | A first-time visitor should understand the lab in five seconds. All of this content already exists on the About page. |
+| 3 | **One consistent navigation:** a single header menu (an accessible hamburger on mobile) with Contact included and a highlighted "Get Involved" button; remove the duplicate button grid | Navigation, mobile | Removes noise and makes the most important actions visible on every screen. |
+| 4 | **Homepage recap sections with "Learn more" links:** short previews of the vision, the four research themes (with their real descriptions) and ways to get involved, each linking to the full page | Content organization, dead-end cards | Turns the homepage into a guide to the rest of the site instead of a dead end. |
+| 5 | **Honest, up-to-date application status:** show the 2025/26 call as closed, with its timeline, instead of "applications are now open" | Clarity, trust | Out-of-date calls to action damage credibility and waste applicants' time. |
+| 6 | **A proper footer** with the lab's full name, address, email and quick links | Navigation, contact | This is where visitors expect to find contact details, and it helps them on every page. |
+| 7 | **Named, linked partner logos** with alt text, each linking to the partner's official site | Accessibility, credibility | Easy to fix, and the partnerships are a strong signal of credibility. |
+| 8 | **Accessibility basics:** SVG icons hidden from screen readers instead of emoji, AA colour contrast, visible keyboard focus, a skip link, a meta description | Accessibility, SEO, visual consistency | Low effort, high value, and expected of a university website. |
+
+### P2: Next (the lab's content team, after the prototype)
+
+- **Replace or hide placeholders:** "Title goes here" publications, the "+251 XXX XXX XXXX" phone number, placeholder team photos. It's better to hide a section than to publish a template.
+- **Keep News & Events current:** move past dates to an archive and add new activities as they happen.
+- **Add real photos** of the lab, the team and events (with consent), which would make the hero and news far stronger than any graphic.
+- **Rebuild the inner pages** (About, Research, Team, …) using the same components as the new homepage.
+
+### P3: Later (platform and process)
+
+- **Move off Google Sites** to the Next.js codebase, so pages share one layout and navigation doesn't reload the header every time, and give it a short, memorable domain.
+- **Add a simple CMS** (for example a headless CMS or Markdown files) so the Communications Officer can publish news and publications without code.
+- **Add privacy-friendly analytics** to learn what visitors actually look for.
+- **Consider an Amharic version** of the key pages.
+- **Set a content review routine** (for example monthly) so deadlines and calls never go stale again.
+
+### Considered, but not chosen
+
+- **Expandable (accordion) cards on the homepage.** Hidden text is read less, and it makes the homepage longer and slower to scan. Short summaries with a "Learn more" link to the full page do the same job better.
+- **A permanent "Apply now" button in the header.** It would raise the visibility of applications, but the 2025/26 call is closed, and promoting a closed call is worse than not promoting it. A "Get Involved" button covers students and partners and works whether or not a call is open. When a new call opens, the header button can switch to "Apply".
+- **Stock photography in the hero.** Generic photos would suggest people, places or activities that aren't the lab's own, which conflicts with keeping the content factual. A typographic hero with a subtle graphic is honest and still visually strong.
