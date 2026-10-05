@@ -161,21 +161,38 @@ export const getInvolved = {
 } as const;
 
 // Source: Get Involved > Application 2025/26 page ("Application Timeline").
-// The deadlines have passed, so the homepage shows this call as closed
-// instead of repeating "applications are now open".
+// `closesOn` is the last deadline (PhD). The homepage works out whether the
+// call is open from this date, so it can never say "open" after the deadline.
 export const applicationCall = {
   title: "Call for Applications 2025/26",
-  subtitle: "Funded Masters and PhD Research Positions",
-  status: "closed" as "open" | "closed",
+  closesOn: "2025-08-11",
   timeline: [
-    { date: "July 28, 2025", label: "Application deadline (Masters)" },
-    { date: "August 11, 2025", label: "Application deadline (PhD)" },
+    {
+      date: "July 28, 2025",
+      label: "Application Deadline of Masters Applicants",
+    },
+    {
+      date: "August 11, 2025",
+      label: "Application Deadline for PhD Applicants",
+    },
     { date: "August 12-18, 2025", label: "Shortlisting & Assessment" },
     { date: "August 20-25, 2025", label: "Interviews" },
     { date: "August 29, 2025", label: "Final Selection & Offers" },
     { date: "September 12, 2025", label: "Program Commencement" },
   ],
-};
+} as const;
+
+export function isCallOpen(today: Date = new Date()) {
+  return today <= new Date(`${applicationCall.closesOn}T23:59:59+03:00`);
+}
+
+// Source: Get Involved page, link text under "Masters and PhD Research Positions".
+export const futureCallsNote =
+  "Check our News & Events section for application deadlines!";
+
+// Source: Contact page ("Contact Us"), first paragraph.
+export const contactIntro =
+  "We'd love to hear from you! Whether you have questions about our research, want to explore collaboration opportunities, or are interested in joining our team, please feel free to reach out.";
 
 export type Partner = {
   name: string;
