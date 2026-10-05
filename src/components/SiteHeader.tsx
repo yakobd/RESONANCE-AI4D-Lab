@@ -17,7 +17,7 @@ export function SiteHeader() {
             className="size-10 shrink-0 lg:size-11"
           />
           <span className="min-w-0 leading-tight">
-            <span className="block truncate font-serif text-lg font-bold text-brand-900">
+            <span className="block truncate font-serif text-base font-bold text-brand-900 min-[360px]:text-lg">
               {lab.name}
             </span>
             <span className="block truncate text-xs text-muted">
