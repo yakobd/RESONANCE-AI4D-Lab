@@ -46,6 +46,9 @@ export const lab = {
   college: "College of Technology and Built Environment",
   collegeShort: "CTBE",
   motto: "Harnessing AI for Sustainable and Inclusive Development.",
+  // The second sentence of the mission, used verbatim as the hero summary.
+  missionLead:
+    "We focus on creating ethical and scalable AI solutions tailored to Ethiopia's specific needs, advancing key Sustainable Development Goals (SDGs) across health, agriculture, governance, and energy.",
   mission:
     "The Resonance Lab (Responsible AI Solutions and Networks for Sustainable Development) at Addis Ababa University aims to position Ethiopia as a leader in Responsible AI for development. We focus on creating ethical and scalable AI solutions tailored to Ethiopia's specific needs, advancing key Sustainable Development Goals (SDGs) across health, agriculture, governance, and energy.",
 } as const;
