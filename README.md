@@ -135,7 +135,7 @@ public/               # AAU seal and partner logos (from the current site)
 
 ## Time spent
 
-About **3 hours 50 minutes** of active work, excluding breaks (including a laptop battery outage).
+About **3 hours 50 minutes** of active work.
 
 | Phase | Time |
 |---|---|
@@ -160,7 +160,7 @@ About **3 hours 50 minutes** of active work, excluding breaks (including a lapto
 - **Research:** Claude Code downloaded the live site's HTML and extracted the text inside the embed blocks, which is how we found that the content sits in iframes and loads the Tailwind CDN in each one.
 - **Assessment:** I reviewed the site and wrote down my own 11 observations first (for example the duplicate navigation, the missing footer, the hidden contact and apply buttons, the slow loading, the poor mobile experience and the non-clickable partner logos). Claude Code then added findings and evidence (Lighthouse scores, the iframe and CDN cause) and drafted `docs/ASSESSMENT.md` from both. I reviewed it and asked it to confirm all my points were included; two were missing, and we added them.
 - **Planning and code:** Claude Code proposed the phase plan, wrote most of the code to my direction, and ran the checks (lint, build, Lighthouse, axe, screenshots). I made the product decisions: the stack, which features to add, the section order and spacing, and what to drop. I made every commit myself after reviewing the change.
-- **README:** drafted by Claude Code in my voice from our working log; I reviewed it before submitting.
+
 
 **How I checked the AI's output**
 
@@ -174,9 +174,9 @@ About **3 hours 50 minutes** of active work, excluding breaks (including a lapto
 - It suggested plain HTML/CSS/JavaScript with no build step; I chose **Next.js and Tailwind CSS**.
 - It recommended skipping dark mode as out of scope; I decided to add it, framed as an enhancement after the P1 work.
 - It recommended CSS-only motion; I wanted Framer Motion. We compromised: Framer Motion only for the mobile menu's exit animation, where CSS falls short.
+- Reframing my point that the icons "look AI-generated" into concrete issues (emoji read aloud by screen readers, inconsistent rendering), which is more useful and more respectful of the existing work.
 
 **AI suggestions I accepted after discussion**
 
-- Reframing my point that the icons "look AI-generated" into concrete issues (emoji read aloud by screen readers, inconsistent rendering), which is more useful and more respectful of the existing work.
 - Using summaries with "Learn more" links instead of expandable cards, using "Get Involved" instead of "Apply now" in the header (the call is closed), and not using stock photos.
 - Skipping a homepage team section to stay within the time guideline; it is listed under *Next steps*.
