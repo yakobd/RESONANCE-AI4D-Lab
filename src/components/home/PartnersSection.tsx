@@ -1,18 +1,18 @@
 import Image from "next/image";
 import { partners } from "@/content/site";
+import { SectionHeading } from "./SectionHeading";
 
 export function PartnersSection() {
   return (
     <section aria-labelledby="partners-title">
-      <div className="mx-auto max-w-6xl px-4 pt-14 pb-20 sm:px-6 lg:pb-24">
-        <h2
+      <div className="mx-auto max-w-6xl px-4 pt-16 pb-20 sm:px-6 lg:pt-20 lg:pb-24">
+        <SectionHeading
           id="partners-title"
-          className="text-center text-sm font-semibold tracking-wider text-accent uppercase"
-        >
-          Our Partners
-        </h2>
+          eyebrow="Working together"
+          title="Our Partners"
+        />
 
-        <ul className="mt-8 grid items-center gap-6 sm:grid-cols-3">
+        <ul className="mt-10 grid items-center gap-6 sm:grid-cols-3">
           {partners.map((partner) => (
             <li key={partner.name} className="reveal">
               <a
