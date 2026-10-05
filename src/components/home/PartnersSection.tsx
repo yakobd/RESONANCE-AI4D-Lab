@@ -19,7 +19,7 @@ export function PartnersSection() {
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-32 items-center justify-center rounded-lg p-4 grayscale-[35%] transition duration-300 hover:bg-paper hover:grayscale-0 dark:bg-white dark:hover:bg-white"
+                className="flex h-32 items-center justify-center rounded-lg p-4 grayscale-35 transition duration-300 hover:bg-paper hover:grayscale-0 dark:bg-white dark:hover:bg-white"
               >
                 <Image
                   src={partner.logo}

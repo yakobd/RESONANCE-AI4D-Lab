@@ -59,7 +59,7 @@ function ResonanceRings() {
     <svg
       aria-hidden="true"
       viewBox="0 0 600 600"
-      className="absolute top-1/2 -right-48 -z-10 size-[42rem] -translate-y-1/2 opacity-25 sm:-right-32 sm:opacity-40 lg:-right-16"
+      className="absolute top-1/2 -right-48 -z-10 size-168 -translate-y-1/2 opacity-25 sm:-right-32 sm:opacity-40 lg:-right-16"
     >
       {[60, 120, 180, 240, 290].map((r, i) => (
         <circle
