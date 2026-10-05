@@ -111,7 +111,7 @@ public/               # AAU seal and partner logos (from the current site)
 - **Responsive** checks at 320, 390 and 1366 px (this found and fixed a truncated header name at 320 px).
 - **Heading outline and landmarks**, checked from the rendered HTML.
 - **Fact check:** a script comparing every content string with the text extracted from the live site.
-- **Keyboard:** skip link, focus visibility, and opening/closing the mobile menu with Enter and Esc. **[CONFIRM: only keep this line if you did the keyboard test]**
+- **Keyboard:** skip link, focus visibility, and opening/closing the mobile menu with Enter and Esc.
 - `npm run lint`, `tsc --noEmit` and `npm run build` pass with no errors.
 
 ## Known limitations
@@ -123,7 +123,7 @@ public/               # AAU seal and partner logos (from the current site)
 - **Scroll reveal doesn't animate in Firefox** (no support for scroll-driven animations yet). Content still appears normally.
 - **Performance is about 71–84, not 100.** What remains is mostly the Next.js/React runtime plus Framer Motion. A static export or removing Framer Motion would raise it.
 - **No real photography, team section, news or publications** on the homepage. A typical lab homepage has these, but the current site has no up-to-date content for them (publications are placeholders, events are from 2025, team photos are placeholders), and the brief forbids inventing content.
-- `npm audit` reports warnings in **development-only** tools (Lighthouse, axe CLI), not in the website's runtime dependencies.
+- `npm audit` reports 14 warnings, all in **development-only** tooling (the Lighthouse and axe CLIs and ESLint's config); `npm audit --omit=dev` finds **0** in the website's runtime dependencies. The suggested `--force` fixes would downgrade those tools, so I left them.
 
 ## Next steps
 
@@ -135,7 +135,7 @@ public/               # AAU seal and partner logos (from the current site)
 
 ## Time spent
 
-About **4 hours** of active work, excluding breaks (including a laptop battery outage).
+About **3 hours 50 minutes** of active work, excluding breaks (including a laptop battery outage).
 
 | Phase | Time |
 |---|---|
@@ -145,8 +145,8 @@ About **4 hours** of active work, excluding breaks (including a laptop battery o
 | Foundation: content model, tokens, header, footer | ~19 min |
 | Homepage sections | ~21 min |
 | Quality pass: Lighthouse, axe, responsive, fact check | ~25 min |
-| Extras: motion, Framer Motion menu, dark theme, polish | ~80 min |
-| README | ~30 min |
+| Extras: motion, Framer Motion menu, dark theme, polish | ~83 min |
+| README and final review | ~15 min |
 
 ## AI and development-tool disclosure
 
@@ -160,13 +160,13 @@ About **4 hours** of active work, excluding breaks (including a laptop battery o
 - **Research:** Claude Code downloaded the live site's HTML and extracted the text inside the embed blocks, which is how we found that the content sits in iframes and loads the Tailwind CDN in each one.
 - **Assessment:** I reviewed the site and wrote down my own 11 observations first (for example the duplicate navigation, the missing footer, the hidden contact and apply buttons, the slow loading, the poor mobile experience and the non-clickable partner logos). Claude Code then added findings and evidence (Lighthouse scores, the iframe and CDN cause) and drafted `docs/ASSESSMENT.md` from both. I reviewed it and asked it to confirm all my points were included; two were missing, and we added them.
 - **Planning and code:** Claude Code proposed the phase plan, wrote most of the code to my direction, and ran the checks (lint, build, Lighthouse, axe, screenshots). I made the product decisions: the stack, which features to add, the section order and spacing, and what to drop. I made every commit myself after reviewing the change.
-- **README:** drafted by Claude Code in my voice from our working log; I reviewed and edited it.
+- **README:** drafted by Claude Code in my voice from our working log; I reviewed it before submitting.
 
 **How I checked the AI's output**
 
 - I reviewed every section in the browser (desktop and mobile) before committing it, and asked for changes where something looked wrong. For example, I asked for more space below the partners section and for its heading to match the other sections.
 - We fact-checked all content against the live site with a script (see *How I tested it*).
-- I ran the page myself in the browser **[CONFIRM: add what you personally checked, e.g. clicking the partner links, the theme toggle, the mobile menu, testing on your phone]**.
+- I tested the page myself in the browser: keyboard navigation (skip link, focus rings, opening and closing the mobile menu with Enter and Esc), each partner link, the theme toggle, and the mobile menu in device emulation.
 - Claude Code also caught some of its own mistakes under the "don't invent" rule, which I kept: it replaced a research intro sentence it had written with the real sentence from the Research page, renamed "Example projects" to "Research directions" (the site doesn't say these are active projects), and changed paraphrased timeline labels to the exact wording.
 
 **Suggestions I rejected or changed**
